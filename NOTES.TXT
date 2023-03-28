@@ -1,0 +1,5 @@
+
+$cat notes.txt
+git status
+git add notes.txt
+
