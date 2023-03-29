@@ -1,0 +1,28 @@
+{
+    "id": "72DD270E",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1680018047207.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "id": "de001f8ac6374677b73079b4ed77e1e1",
+        "name": "awsome_violin_plot",
+        "title": "awsome_violin_plot",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1728296335848,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1680018047207,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,28 @@
+{
+    "id": "9A827B3D",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1680018043293.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "id": "6246732b9e054f63b4859aa272dbbcdd",
+        "name": "awsome_plot",
+        "title": "awsome_plot",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1728296335848,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1680018043293,
+    "read_only": false,
+    "read_only_alternatives": []
+}
