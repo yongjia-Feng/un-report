@@ -1,0 +1,155 @@
+---
+title: "writing reports with R Markdown"
+output: html_document
+date: "2023-03-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages,include=FALSE}
+library(tidyverse)
+```
+
+
+
+this report was prepared tp the attention of the United Nations, It analyzed the relationship between a country's GDP , ITS LIFE EXPECTANCY and co2emissions, Our goal is to determin
+
+```{r data}
+gapminder_1997<-read_csv("data/gapminder_1997.csv")
+```
+
+```{r gap_lifeexp_1997}
+ggplot(data=gapminder_1997)+
+  aes(x=gdpPercap,y=lifeExp,color=continent,size=pop/1000000)+
+  geom_point()+
+  labs(x ="GDP Per Capita",
+       y="Life Expectancy",
+       title = "Do people in Weathy country Live longer?",
+       size= "Population(in millions)")
+```      
+
+    
+```{r varaibles,include=FALSE}
+nCountries<-gapminder_1997 %>% 
+  select(country) %>% 
+  n_distinct()
+  
+minGDP<-gapminder_1997 %>% 
+  summarise(round(min(gdpPercap))) %>% 
+  pull()
+
+maxGDP<-gapminder_1997 %>% 
+  summarise(round(min(gdpPercap))) %>% 
+  pull()
+
+
+```
+
+
+the above plot shows therelationship between GDP per capital and life expentancy for a total of 'r nCountries'countries. For 
+
+
+|HEADER 1|HEADER 2|
+|--------|--------|
+|row 1,colum 1|row 1,column 2|
+|row 2,colum 1|row 2,column 1|
+
+
+|Summary of Data|
+|--------|--------|
+|Nmber of Countries|'r nCountries'|
+|Minium GDP per capita|'r minGDP'|
+|Maxium GDP per capita|'r maxGDP'|
+
+
+```{r kabletable}
+library(knitr)
+
+
+gapminder_1997 %>% 
+  filter(continent=="Oceania") %>% 
+  kable()
+```
+#Header1 
+##Header2
+###my third header
+
+Exercise : R Markdown syntax
+*create a bullet point list with three items
+*as the 1st item, write the name of your currently favorite programming language in bold
+*as the second item, write the name of  a function you hVE SO FAR FOUND MOST UEFUL IN LITALICS
+*as the 3rd item, write one thing you want to learn next on your programming journey in bold italics
+*turn your bullet point list into a numbered list
+*create a 4th list item and find an online guide and /or cheat sheet for basic markdown syntax, write its name down here and hyperlink its url
+
+
+
+|my favorite programming |
+|--------|--------|
+|1st|'R'|
+|2nd|'ggplot'|
+|3rd|'R analysis for single cell data'|
+
+```{r kabletable}
+library(knitr)
+  
+  kable()
+```
+my list:
+* **R**
+* *mutate()*
+* ***python***
+
+1. **R**
+2. *mutate()*
+3. ***python***
+4. [https://www.markdownguide.org/cheat-sheet/](Great Markdown Guide)
+
+
+
+
+         
+         
+         
+ Steps for a git flow:
+ 
+ ***git push
+ 1. git status
+ 2. git add
+ 3. git commit -m"massage"
+ 
+ 
+ 
+ 4. git push
+         
+         
+         
+         
+         
+       
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
